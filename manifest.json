@@ -1,0 +1,13 @@
+{
+    "name": "CV CERM",
+    "short_name": "CERM",
+    "icons": [{
+        "src": "images/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#0365C0",
+    "theme_color": "#51A7F9"
+}

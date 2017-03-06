@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+    <!-- CSS de materialize -->
+    <link rel="stylesheet" type="text/css" href="styles/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cerm</title>
+
+    <!-- Manifest pour rendre l'application telechargeable -->
+    <link rel="manifest" type="application/json" href="/manifest.json">
+
+    <!-- Pour l'application iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CV CERM">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#51A7F9">
+
+</head>
+
+<body>
+    <header>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img src="images/background.png" width="300" height="186">
+                    </div>
+                    <a href="#!user"><img style="margin: auto" class="circle" src="images/bender.png"></a>
+                    <span class="white-text  name" style="text-align: center; font-size: 16px !important; font-weight: Bold !important;">LEON - ORLANDINI</span>
+                    <span class="white-text email" style="text-align: center;">nicolas.orlandini@outlook.fr</span>
+                </div>
+            </li>
+            <li>
+                <a class="waves-effect" href="index.html">
+                    <i class="material-icons prefix">home</i> Home
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="about.html">
+                    <i class="material-icons prefix">account_circle</i> A propos de moi
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="experience.html">
+                    <i class="material-icons prefix">work</i> Expérience professionnelle
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="schooling.html">
+                    <i class="material-icons prefix">school</i> Formations
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="skill.html">
+                    <i class="material-icons prefix">lightbulb_outline</i> Compétences
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="creation.html">
+                    <i class="material-icons prefix">build</i> Réalisations
+                </a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="waves-effect" href="contact.html">
+                    <i class="material-icons prefix">email</i>Contact
+                </a>
+            </li>
+        </ul>
+        <nav style="position: fixed; z-index:1;">
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <span class="left hide-on-med-and-down">CV</span>
+            <span class="titre left hide-on-large-only">Contact</span>
+            <span href="#" class="titre center hide-on-med-and-down">Contact</span>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <form class="col s12" id="contactForm" method="POST">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" class="validate" data-length="35">
+                            <label for="first_name">Prénom</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="last_name" type="text" class="validate" data-length="35">
+                            <label for="last_name">Nom</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">subject</i>
+                            <input id="subject" type="text" class="validate" data-length="90">
+                            <label for="subject">Sujet</label>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="input-field col s12 ">
+                            <i class="material-icons prefix">message</i>
+                            <textarea id="message" class="materialize-textarea" data-length="1000"></textarea>
+                            <label for="message ">Message</label>
+                        </div>
+                    </div>
+                </form>
+                <button style="z-index: 0;" id="btnSend" class="btn waves-effect waves-light" type="submit" name="action">Envoyer<i class="material-icons right">send</i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CV Cerm</h5>
+                    <p class="grey-text text-lighten-4">Application CV Progressive Web App.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Liens</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="about.html">A propos de moi</a></li>
+                        <li><a class="grey-text text-lighten-3" href="experience.html">Expériences professionnelles</a></li>
+                        <li><a class="grey-text text-lighten-3" href="schooling.html">Formations</a></li>
+                        <li><a class="grey-text text-lighten-3" href="skill.html">Compétences</a></li>
+                        <li><a class="grey-text text-lighten-3" href="creation.html">Réalisations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright Valentin LEON &amp; Nicolas Orlandini
+            </div>
+        </div>
+    </footer>
+
+    <!-- Uncomment the line below when ready to test with fake data -->
+    <script type="text/javascript " src="https://code.jquery.com/jquery-3.1.1.min.js "></script>
+    <script src="scripts/materialize.min.js "></script>
+    <script type="text/javascript" src="/scripts/sWorker.js"></script>
+    <script src="scripts/navigationDrawer.js "></script>
+    <script type="text/javascript">
+        $("#btnSend").click(function() {
+            window.open('mailto:valentin.leon0@gmail.com?subject=' + document.getElementById("subject").val() + '&body=' + document.getElementById("message").val() + '');
+        });
+    </script>
+    <script src="scripts/alertify.js"></script>
+    <!--<script type="text/javascript" src="/scripts/contact.js"></script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+    <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <link rel="stylesheet" type="text/css" href="styles/materialize.css">
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cerm</title>
+
+    <!-- Manifest pour rendre l'application téléchargeable -->
+    <link rel="manifest" type="application/json" href="manifest.json">
+
+    <!-- Pour l'application iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CV CERM">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#51A7F9">
+
+</head>
+
+<body>
+    <header>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img src="images/background.png" width="300" height="186">
+                    </div>
+                    <a href="#!user"><img style="margin: auto" class="circle" src="images/bender.png"></a>
+                    <span class="white-text  name" style="text-align: center; font-size: 16px !important; font-weight: Bold !important;">LEON - ORLANDINI</span>
+                    <span class="white-text email" style="text-align: center;">nicolas.orlandini@outlook.fr</span>
+                </div>
+            </li>
+            <li>
+                <a class="waves-effect" href="index.html">
+                    <i class="material-icons prefix">home</i> Home
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="about.html">
+                    <i class="material-icons prefix">account_circle</i> A propos de moi
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="experience.html">
+                    <i class="material-icons prefix">work</i> Expérience professionnelle
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="schooling.html">
+                    <i class="material-icons prefix">school</i> Formations
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="skill.html">
+                    <i class="material-icons prefix">lightbulb_outline</i> Compétences
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect" href="creation.html">
+                    <i class="material-icons prefix">build</i> Réalisations
+                </a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="waves-effect" href="contact.html">
+                    <i class="material-icons prefix">email</i>Contact
+                </a>
+            </li>
+        </ul>
+        <nav style="position: fixed; z-index:1;">
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <span class="left hide-on-med-and-down">CV</span>
+            <span class="titre left hide-on-large-only">Home</span>
+            <span href="#" class="titre center hide-on-med-and-down">Home</span>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="col s12 m7" style="margin-top:100px;">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img style="width:100px; height:150px;" src="/images/scott.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Valentin</p>
+                        <p>LEON</p>
+                    </div>
+                    <div class="card-action">
+                        <p><i>Bow ties are cool</i> - The Doctor</p>
+                    </div>
+                </div>
+                <span class="card-title activator" style="color:black;"><i class="material-icons right">more_vert</i></span>
+
+                <div class="card-reveal" style="overflow:hidden;">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <div class="horizontal">
+                        <div class="card-image" style="float:left;">
+                            <img style="width:100px; height:150px;" src="/images/tardis.png">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>Nicolas</p>
+                                <p>ORLANDINI</p>
+                            </div>
+                            <div class="card-action">
+                                <p><i>The truth is out there</i> - Fox Mulder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+        <div class="containerParent">
+            <div id="map"></div>
+            <div class="inner box1">
+                <a href="/about.html"><span class="parent"><i class="medium material-icons customIcon">perm_identity</i></span></a>
+            </div>
+
+            <div class="inner box2">
+                <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
+            </div>
+
+            <div class="inner box3">
+                <a href="/contact.html"><span class="parent"><i class="medium material-icons customIcon">email</i></span></a>
+            </div>
+        </div>
+
+        <div style="display: inline-block; margin:15px; margin-left: 27%;">
+            <span class="spanPhone" style="position:relative; font-size:25px; font-weight:bold; margin-left:29%;">
+                <img style="position:relative;margin-right: -20px;" class="circle avatarHome" src="images/bender.png">
+                <i class="small material-icons iconPhone" style="top:15px;">phone</i><span class="telephone">06.73.17.49.70</span>
+            </span><br>
+            <span class="address" style="margin-left:45%;">31 Avenue Frédéric Mistral</span><br>
+            <span class="city" style="margin-left:50%;">06130 Grasse</span>
+        </div>
+
+        <div class="grid">
+            <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
+                <div class="one-one parent">
+                    <img class="center-align" src="/images/icons/facebook.png" alt="">
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nicolas-orlandini-1b3871129/?locale=fr_FR">
+                <div class="one-two parent">
+                    <img class="center-align" src="/images/icons/linkedin.png" alt="">
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="two-one parent">
+                    <img class="center-align" src="/images/icons/googleplus.png" alt="">
+                </div>
+            </a>
+
+            <a href="https://twitter.com/SinguFuret" target="_blank">
+                <div class="two-two parent">
+                    <img class="center-align" src="/images/icons/twitter.png" alt="">
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CV Cerm</h5>
+                    <p class="grey-text text-lighten-4">Application CV Progressive Web App.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Liens</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="about.html">A propos de moi</a></li>
+                        <li><a class="grey-text text-lighten-3" href="experience.html">Expériences professionnelles</a></li>
+                        <li><a class="grey-text text-lighten-3" href="schooling.html">Formations</a></li>
+                        <li><a class="grey-text text-lighten-3" href="skill.html">Compétences</a></li>
+                        <li><a class="grey-text text-lighten-3" href="creation.html">Réalisations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright Valentin LEON &amp; Nicolas Orlandini
+            </div>
+        </div>
+    </footer>
+
+    <!-- Uncomment the line below when ready to test with fake data -->
+    <!--<script src="scripts/app.js" async></script>-->
+    <script type="text/javascript" src="/scripts/sWorker.js"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/navigationDrawer.js"></script>
+    <script src="scripts/customCardView.js"></script>
+    <script type="text/javascript" src="scripts/geolocalisation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async defer></script>
+    <script src="scripts/alertify.js"></script>
+
+</body>
+
+</html>

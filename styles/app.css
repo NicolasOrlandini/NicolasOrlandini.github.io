@@ -1,0 +1,120 @@
+/* Classes objets persos */
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.description {
+    margin-left: 20px;
+}
+
+.period {
+    font-family: "bttf";
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    margin-top: 30px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+nav {
+    background-color: #ff6500 !important;
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+nav .button-collapse i {
+    font-size: 2.7rem !important;
+    height: 56px !important;
+    line-height: 56px !important;
+}
+
+.onCenter {
+    float: right;
+    margin-right: 45%;
+    font-weight: bold;
+    font-size: 27px;
+    color: black;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: auto;
+}
+
+main {
+    flex: 1 0 auto !important;
+    margin-top: 70px;
+}
+
+footer.page-footer {
+    width: 100%;
+    background-color: #ff7b00 !important;
+}
+
+.footer-copyright {
+    padding-left: 15px !important;
+    background-color: #ff6500 !important;
+    padding-bottom: 22px !important;
+}
+
+.btn {
+    background-color: #ff7b00 !important;
+}
+
+.titre {
+    font-size: 20px !important;
+}
+
+.card-reveal {
+    z-index: 0 !important;
+}
+
+a.customAction {
+    color: white !important;
+}
+
+a.customAction:hover {
+    color: #ff7b00 !important;
+}
+
+div .card.cardTemplate::before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: calc(50% - 26px);
+    position: absolute;
+    background: #d2d2d2;
+    left: calc(50% - 1px);
+    top: 0;
+}
+
+div .card.cardTemplate::after {
+    display: block;
+    content: "";
+    width: 2px;
+    height: calc(50% - 30px);
+    position: absolute;
+    background: #d2d2d2;
+    left: calc(50% - 1px);
+    top: calc(50% + 35px);
+}
+
+@media screen and (max-width: 450px) {
+    .scott {
+        margin-left: 25% !important;
+    }
+    .githubLink {
+        font-size: 12px;
+    }
+}
