@@ -29,8 +29,6 @@ var filesToCache = [
     '/images/euca.jpg',
     '/images/iut.png',
     '/images/imperial.jpg',
-    '/images/ufip.png',
-    '/images/valrose.jpg',
     '/images/geotweetLP.png',
     '/images/Samaritan.png',
     '/images/icons/facebook.png',

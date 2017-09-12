@@ -75,6 +75,13 @@ span.timelineDate {
     top: 6px;
 }
 
+.imageTimeline {
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 450px) {
     .timeline .timeline-event .timeline-content {
         width: 85% !important;
