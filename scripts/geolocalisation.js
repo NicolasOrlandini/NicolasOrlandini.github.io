@@ -1,48 +1,42 @@
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: {
-            lat: 43.616757,
-            lng: 7.0689172
-        },
-        zoom: 8,
-    });
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: map,
-                title: 'you are here!'
-            });
+    
+        // coordonnées
+        var coordNicolas = new google.maps.LatLng(43.718399, 7.256210);
 
-            // infoWindow.setPosition(pos);
-            marker.setMap(map);
-            map.setCenter(pos);
-        }, function () {
-            handleLocationError(true, infoWindow, map.getCenter());
+        var optionsNicolas = {
+            center: coordNicolas,
+            zoom: 16,
+        };
+    
+        // initialisation de la map
+        var mapNicolas = new google.maps.Map(document.getElementById('mapNicolas'), optionsNicolas);
+    
+        // le marqueur
+        markerNicolas = new google.maps.Marker({
+            map: mapNicolas,
+            animation: google.maps.Animation.DROP,
+            position: coordNicolas,
+            title: 'Nicolas ORLANDINI'
         });
-    } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
+        // on affecte l'animation sur les marqueurs
+        markerNicolas.addListener('click', toggleBounce);
+    
+        // on stoppe l'animation au bout d'une seconde
+        setTimeout(function() { markerNicolas.setAnimation(null); }, 1000);
+    
+        // fonction d'animation pour les marqueurs
+        function toggleBounce() {
+            if (markerNicolas.getAnimation() === null) {
+                markerNicolas.setAnimation(google.maps.Animation.BOUNCE);
+            } else {
+                markerNicolas.setAnimation(null);
+            }
+        }
     }
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: Le service de géolocalisation a failed.' :
-        'Error: Votre navigateur ne supporte pas le service de navigation.');
-}
-
-function hideCloseButton(id) {
-    document.getElementById(id).style.display = 'none';
-    document.getElementById('map').style.display = 'none';
-}
-
-function showCloseButton(id) {
-    document.getElementById(id).style.display = 'inline-block';
-}
+    
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: Le service de géolocalisation a failed.' :
+            'Error: Votre navigateur ne supporte pas le service de navigation.');
+    }

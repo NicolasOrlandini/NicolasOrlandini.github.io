@@ -23,7 +23,6 @@ var filesToCache = [
     '/scripts/materialize.js',
     '/scripts/navigationDrawer.js',
     '/fonts/BTTF.ttf',
-    '/images/scott.png',
     '/images/tardis.png',
     '/images/background.png',
     '/images/bender.png',
